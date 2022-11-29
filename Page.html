@@ -274,13 +274,13 @@
         btnmodifier.onclick = modifier;
         function modifier(){
 
-            let date = date.value;
-            date = date.split("-").reverse().join("/");
+//             let date = date.value;
+//             date = date.split("-").reverse().join("/");
          
             nom.value = table.rows[ligne.rowIndex].cells[0].innerText;
             marque.value = table.rows[ligne.rowIndex].cells[1].innerText;
             prix.value = table.rows[ligne.rowIndex].cells[2].innerText;
-            date= table.rows[ligne.rowIndex].cells[3].innerText;
+            date.value= table.rows[ligne.rowIndex].cells[3].innerText;
             type.value =table.rows[ligne.rowIndex].cells[4].innerText;
              
              if (checkradio.innerHTML=="oui") {
@@ -293,13 +293,13 @@
              
             document.getElementById("charge").onclick = ModifierdeAjouterRow;
             function ModifierdeAjouterRow() {
-                let date = date.value;
-                dateP = date.split("-").reverse().join("/");
+//                 let date = date.value;
+//                 dateP = date.split("-").reverse().join("/");
 
                     table.rows[ligne.rowIndex].cells[0].innerText = nom.value;
                     table.rows[ligne.rowIndex].cells[1].innerText= marque.value;
                     table.rows[ligne.rowIndex].cells[2].innerText = prix.value;
-                    table.rows[ligne.rowIndex].cells[3].innerText = dateP;
+                    table.rows[ligne.rowIndex].cells[3].innerText = date.value;
                     table.rows[ligne.rowIndex].cells[4].innerText = type.value;
 
                     if (document.getElementById("oui").checked == true) {
